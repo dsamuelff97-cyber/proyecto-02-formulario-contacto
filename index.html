@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF'8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>Contacto — Samuel Flores</title>
+    </head>
+
+    <body>
+        <main>
+            <h1>Contáctame</h1>
+            <p>Llena el formulario y me pondré en contacto contigo pronto.</p>
+
+            <form action="#" method="GET">
+
+                <!--Campo: Nombre completo-->
+                <div class="campo">
+                    <label for="nombre">Nombre completo:</label>
+                    <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Ej. María Gonzáles"
+                    required
+                    minlength="3"
+                    maxlength="60"
+                    autocomplete="name"
+                    aria-required="true"
+                    >
+                </div>
+
+                <!--Campo: Correo electrónico-->
+                <div class="campo">
+                    <label for="email">Correo electrónico:</label>
+                    <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="ejemplo@correo.com"
+                    required
+                    autocomplete="email"
+                    aria-required="true"
+                    >
+                </div>
+                
+                <!--Campo: Teléfono (opcional)-->
+                <div class="campo">
+                    <label for="telefono">Teléfono (opcional):</label>
+                    <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    placeholder="(477) 123-4567"
+                    pattern="[\d\s\-\(\)]{7,15}"
+                    aria-describedby="telefono-ayuda"
+                    >
+                    <small id="telefono-ayuda">Formato: (477) 123-4567</small>
+                </div>
+
+                <!--Campo: Asunto-->
+                <div class="campo">
+                    <label for="asunto">Asunto:</label>
+                    <select id="asunto" name="asunto" required aria-required="true">
+                        <option value="">-- Selecciona un motivo --</option>
+                        <option value="trabajo">Propuesta de trabajo</option>
+                        <option value="freelance">Proyecto freelance</option>
+                        <option value="pregunta">Pregunta general</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <!--Campo: Mensaje-->
+                <div class="campo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    placeholder="Escribe tu mensaje aquí..."
+                    required
+                    minlength="10"
+                    maxlength="500"
+                    rows="5"
+                    aria-required="true"
+                    aria-describedby="mensaje-ayuda"
+                    ></textarea>
+                    <small id="mensaje-ayuda">Mínimo 10 caracteres, máximo 500</small>
+                </div>
+
+                <!--Botón de envío-->
+                <button type="submit">Enviar mensaje</button>
+
+            </form>
+        </main>
+
+    </body>
+</html>
